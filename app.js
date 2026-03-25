@@ -81,7 +81,7 @@ form.addEventListener('submit', async (event) => {
 
   try {
     setStatus('Converting...');
-    const safeFiles = selectedFiles.filter((file) => file.type === 'image/jpeg');
+    const safeFiles = selectedFiles.filter((file) => ['image/jpeg', 'image/jpg'].includes(file.type));
 
     if (!safeFiles.length) {
       setStatus('Only JPG/JPEG files are allowed.', true);
