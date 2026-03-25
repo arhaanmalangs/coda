@@ -15,3 +15,11 @@ python -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Deploy (Vercel)
+
+This repo includes `vercel.json` to route all paths to `index.html` and avoid `404: NOT_FOUND` for static deployments.
+
+```bash
+vercel --prod
+```
