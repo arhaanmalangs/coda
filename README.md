@@ -23,3 +23,15 @@ This repo includes `vercel.json` to route all paths to `index.html` and avoid `4
 ```bash
 vercel --prod
 ```
+
+
+## If GitHub shows merge conflicts
+
+For conflicts in `app.js` and `index.html`, keep the version from this branch that includes:
+
+- `const convertButton = document.getElementById('convertButton');`
+- the `window.jspdf` load check and `convertButton.disabled = true` fallback
+- only **one** `let selectedFiles = [];` declaration
+- the `index.html` script tag without the old `integrity` hash
+
+Then mark resolved and commit the merge.
