@@ -58,3 +58,63 @@
     <script src="app.js"></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPG to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      integrity="sha512-qZvrmS5S9yQ0JvQ2h7A8fpN9M7xqchv6o5S4M0V8uW1B3Qj8vE2oT74zX11FfN8WwoMvV7lidh+NangNh4tW7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>JPG to PDF Converter</h1>
+      <p class="subtitle">
+        Convert JPG images to one PDF in your browser. No upload server is used.
+      </p>
+
+      <section class="card">
+        <form id="convertForm">
+          <label for="imageInput" class="label">Choose JPG files</label>
+          <input
+            id="imageInput"
+            type="file"
+            accept=".jpg,.jpeg,image/jpeg"
+            multiple
+            required
+          />
+
+          <div class="options">
+            <label for="pdfName">PDF file name</label>
+            <input id="pdfName" type="text" placeholder="converted-images" />
+          </div>
+
+          <button type="submit" id="convertButton">Convert to PDF</button>
+        </form>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section class="privacy-note">
+        <h2>Privacy Promise</h2>
+        <ul>
+          <li>Your files are processed only in your browser.</li>
+          <li>Nothing is uploaded to a server.</li>
+          <li>
+            Selected image data is cleared from memory right after PDF generation
+            or if you reset the page.
+          </li>
+        </ul>
+        <button id="clearDataButton" type="button" class="secondary">Clear Data Now</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
